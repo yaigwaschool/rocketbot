@@ -8,7 +8,7 @@ app.get("/discord/*", (req, res, next) => {
     resp.pipe(res)
   }).end()
 })
-app.get("/rocket/*", (req, res, next) => {
+app.get("/*", (req, res, next) => {
   https.request(new URL("https://rocketbotroyale.winterpixel.io" + req.path), (resp) => {
     res.contentType(resp.headers["content-type"])
     resp.pipe(res)
