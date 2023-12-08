@@ -10,10 +10,10 @@ app.get("/discord/*", (req, res, next) => {
     resp.pipe(res)
   }).end()
 })
-app.get("/rocket/*", (req, res, next) => {
-  const pathSegments = req.path.split('/');
-  const rocketPath = pathSegments[2]
-  https.request(new URL("https://rocketbotroyale.winterpixel.io/" + rocketPath), (resp) => {
+app.get("/*", (req, res, next) => {
+  //const pathSegments = req.path.split('/');
+ // const rocketPath = pathSegments[2]
+  https.request(new URL("https://rocketbotroyale.winterpixel.io/" + req.path), (resp) => {
     res.contentType(resp.headers["content-type"])
     resp.pipe(res)
   }).end()
