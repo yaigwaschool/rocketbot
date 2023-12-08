@@ -3,12 +3,12 @@ const https = require("https")
 const app = express()
 
 app.get("/discord/*", (req, res, next) => {
-  https.request(new URL("https://discord.com" + req.path), (resp) => {
+  https.request(new URL("https://discord.com/" + req.path), (resp) => {
     res.contentType(resp.headers["content-type"])
     resp.pipe(res)
   }).end()
 })
-app.get("/*", (req, res, next) => {
+app.get("/rocket/*", (req, res, next) => {
   https.request(new URL("https://rocketbotroyale.winterpixel.io" + req.path), (resp) => {
     res.contentType(resp.headers["content-type"])
     resp.pipe(res)
