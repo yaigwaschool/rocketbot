@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.3",
     "fly": "^4.6.3",
+    "http-proxy-middleware": "^2.0.6",
     "node-fetch": "^2.7.0"
   }
 }
