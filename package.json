@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
+    "fly": "^4.6.3",
     "node-fetch": "^2.7.0"
   }
 }
